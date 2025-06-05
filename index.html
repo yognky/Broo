@@ -1,70 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>YOU ARE AN IDIOT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOHON MAAF..TADI WEBSITE HAMPIR KENA HACK SEPENUHNYA..UNTUNG ADA YONGKY</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #ffdddd;
+            color: #d32f2f;
+            text-align: center;
+            padding: 50px;
             margin: 0;
-            background-color: black;
-            color: red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            font-family: monospace;
         }
+
         h1 {
-            font-size: 60px;
-            animation: blink 0.4s infinite;
+            font-size: 50px;
+            color: #d32f2f;
         }
-        @keyframes blink {
-            0% {opacity: 1;}
-            50% {opacity: 0;}
-            100% {opacity: 1;}
+
+        p {
+            font-size: 20px;
+            margin-top: 20px;
         }
-        video {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
+
+        .message {
+            font-size: 18px;
+            color: #d32f2f;
+            background-color: #fce4e4;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #e57373;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .important {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <h1>YOU ARE AN IDIOT</h1>
 
-    <!-- Background Video -->
-    <video autoplay loop muted>
-        <source src="https://ia802508.us.archive.org/19/items/youareanidiot_202005/you%20are%20an%20idiot.mp4" type="video/mp4">
-    </video>
+    <h1>Website Sedang Dalam Pemulihan</h1>
+    
+    <div class="message">
+        <p><strong>Peringatan:</strong> Website ini telah terkena serangan siber (hack) dan sedang dalam proses pemulihan.</p>
+        <p>Tim kami sedang bekerja keras untuk mengembalikan semua data dan memastikan keamanan situs kami kembali terjaga.</p>
+        <p><span class="important">Website akan kembali pulih pada besok hari, harap bersabar.</span></p>
+        <p>Terima kasih atas pengertian Anda.</p>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Website Ini. Semua hak cipta dilindungi.</p>
+    </footer>
 
-    <!-- Auto Play Sound -->
-    <audio id="idiotsound" loop>
-        <source src="https://www.myinstants.com/media/sounds/you-are-an-idiot.mp3" type="audio/mpeg">
-    </audio>
-
-    <script>
-        window.onload = () => {
-            const audio = document.getElementById("idiotsound");
-
-            // Autoplay tanpa paksa volume
-            const tryPlay = () => {
-                const playPromise = audio.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(() => {
-                        document.body.addEventListener("click", () => {
-                            audio.play();
-                        }, { once: true });
-                    });
-                }
-            };
-
-            tryPlay();
-        };
-    </script>
 </body>
 </html>
