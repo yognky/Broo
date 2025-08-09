@@ -1,97 +1,261 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Berita Resmi: Terbentuknya Clan 0xCyber.ID</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DJ Ohim Akui Sebagai Ayah Biologis Anak yang Dikandung Erika Carlina</title>
+  <meta name="description" content="DJ Ohim membuat pengakuan mengejutkan sebagai ayah biologis anak yang dikandung Erika Carlina. Reaksi warganet pun beragam." />
   <style>
-    body {
-      background-color: #0d1117;
-      color: #00ffc8;
-      font-family: 'Courier New', monospace;
-      margin: 0;
-      padding: 0;
+    :root{
+      --bg:#ffffff;
+      --card:#f8f9fb;
+      --text:#111827;
+      --muted:#6b7280;
+      --accent:#0ea5a4;
+      --maxw:800px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      justify-content:center;
+      padding:24px;
+      min-height:100vh;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(16,24,40,0.06);
+      overflow:hidden;
+    }
+    .hero{
+      width:100%;
+      display:block;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      background:#e6eef0;
+    }
+    .content{
+      padding:24px;
+    }
+    .kicker{
+      display:inline-block;
+      background:rgba(14,165,164,0.12);
+      color:var(--accent);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+      margin-bottom:12px;
+    }
+    h1{
+      margin:6px 0 12px 0;
+      font-size:22px;
+      line-height:1.25;
+    }
+    .meta{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:18px;
+    }
+    p{color:var(--text); font-size:15px; line-height:1.6; margin:0 0 12px 0;}
+    .comments{
+      margin-top:18px;
+      padding:14px;
+      border-radius:10px;
+      background:rgba(17,24,39,0.03);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .caption{
+      font-size:13px;
+      color:var(--muted);
+      padding:12px 24px 0 24px;
+    }
+    .actions{
+      display:flex;
+      gap:10px;
+      margin-top:18px;
+    }
+    .btn{
+      border:1px solid rgba(16,24,40,0.06);
+      background:white;
+      padding:8px 12px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+      font-size:14px;
+    }
+    @media (max-width:520px){
+      h1{font-size:18px}
+      .content{padding:16px}
     }
 
-    header {
-      background-color: #161b22;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #00ffc8;
+    /* Password gate styles */
+    .gate {
+      position:fixed;
+      inset:0;
+      background:linear-gradient(180deg, rgba(2,6,23,0.85), rgba(2,6,23,0.9));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:9999;
+      padding:24px;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: #00ffc8;
-      letter-spacing: 2px;
+    .gate-card{
+      width:100%;
+      max-width:420px;
+      background:white;
+      border-radius:12px;
+      padding:22px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.5);
+      text-align:center;
     }
-
-    main {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.8;
+    .gate-card h2{margin:0 0 8px 0; font-size:18px; color:var(--text)}
+    .gate-card p{margin:0 0 16px 0; color:var(--muted); font-size:14px}
+    .pw-input{
+      width:100%;
+      padding:10px 12px;
+      font-size:16px;
+      border:1px solid rgba(16,24,40,0.08);
+      border-radius:8px;
+      margin-bottom:10px;
     }
-
-    .highlight {
-      color: #ff4fe6;
-      font-weight: bold;
+    .pw-actions{display:flex; gap:8px; justify-content:center}
+    .pw-btn{
+      padding:10px 14px;
+      border-radius:8px;
+      border:0;
+      background:var(--accent);
+      color:white;
+      font-weight:700;
+      cursor:pointer;
     }
-
-    .logo {
-      text-align: center;
-      margin-bottom: 20px;
+    .pw-btn.secondary{
+      background:transparent;
+      color:var(--text);
+      border:1px solid rgba(16,24,40,0.06);
+      font-weight:600;
     }
-
-    .logo img {
-      width: 150px;
-      border: 2px solid #00ffc8;
-      border-radius: 12px;
+    .error{
+      color:#b91c1c;
+      font-size:13px;
+      margin-top:8px;
+      min-height:18px;
     }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #161b22;
-      color: #ccc;
-      font-size: 0.9em;
-      margin-top: 40px;
-    }
+    .hidden{display:none}
   </style>
 </head>
 <body>
-
-<header>
-  <h1>0xCyber.ID Resmi Berdiri</h1>
-</header>
-
-<main>
-  <div class="logo">
-    <!-- Ganti src dengan logo yang kamu punya -->
-    <img src="logo_0xcyber.png" alt="Logo 0xCyber.ID" />
+  <!-- Password gate (muncul dulu, konten tersembunyi sampai benar) -->
+  <div id="gate" class="gate" role="dialog" aria-modal="true" aria-label="Masukkan kata sandi">
+    <div class="gate-card" role="document">
+      <h2>Akses Terbatas</h2>
+      <p>Masukkan kata sandi untuk lanjut ke situs.</p>
+      <input id="pw" class="pw-input" type="password" inputmode="text" placeholder="Kata sandi" aria-label="Kata sandi" />
+      <div class="pw-actions">
+        <button id="submitPw" class="pw-btn">Masuk</button>
+        <button id="cancelPw" class="pw-btn secondary">Tutup</button>
+      </div>
+      <div id="err" class="error" aria-live="polite"></div>
+      <div style="margin-top:12px; font-size:12px; color:var(--muted)">Tip: kata sandi adalah <strong>yongky</strong></div>
+    </div>
   </div>
 
-  <article>
-    <p><span class="highlight">Cybersecurity Community Indonesia</span> kembali dikejutkan dengan terbentuknya clan baru bertajuk <strong>0xCyber.ID</strong>, sebuah komunitas cyber yang fokus pada edukasi, eksplorasi, dan perlindungan digital di era modern.</p>
+  <!-- Konten asli disembunyikan sampai password benar -->
+  <div id="siteContent" class="container hidden" aria-hidden="true">
+    <article class="card" role="article" aria-label="Berita: DJ Ohim Akui">
+      <img class="hero" src="https://raw.githubusercontent.com/yognky/Broo/refs/heads/main/IMG_20250809_193045.jpg" alt="Foto DJ Ohim" />
+      <div class="content">
+        <div class="kicker">Hiburan • Jakarta</div>
+        <h1>DJ Ohim Akui Sebagai Ayah Biologis Anak yang Dikandung Erika Carlina</h1>
+        <div class="meta">Diterbitkan: Sekarang • Editor: Redaksi Hiburan</div>
 
-    <p>Clan ini diprakarsai oleh dua tokoh muda dengan semangat tinggi di dunia keamanan siber, yaitu <span class="highlight">Yongky</span> dan <span class="highlight">Mizzu</span>. Mereka menginisiasi komunitas ini sebagai wadah bagi para coder, pentester, dan pecinta cybersecurity untuk belajar dan berkembang bersama.</p>
+        <p><strong>Jakarta —</strong> DJ Ohim membuat pengakuan yang mengejutkan publik dengan menyatakan bahwa ia adalah ayah biologis dari anak yang dikandung aktris dan model Erika Carlina. Pernyataan ini langsung memicu gelombang perbincangan di media sosial dan forum daring.</p>
 
-    <p>Dengan moto <em>"Code. Protect. Repeat."</em>, 0xCyber.ID membuka pintu lebar-lebar bagi siapa saja yang memiliki minat dalam dunia digital defense, mulai dari pemula hingga profesional. Komunitas ini memiliki fokus utama pada:</p>
-    <ul>
-      <li>Firewall Development</li>
-      <li>Anti-DDoS Tactics</li>
-      <li>WiFi & Network Security</li>
-      <li>File Encryption & Protection</li>
-    </ul>
+        <p>Reaksi warganet beragam; beberapa pengguna meragukan kebenaran klaim tersebut dan menyatakan kekhawatiran terhadap dampak pada reputasi Erika. “Njir lah pada ngaku-ngaku gini bikin jelek nama Erika,” tulis salah satu komentar yang ramai dikutip di platform mikroblogging.</p>
 
-    <p>Bergabunglah dengan kami, jadi bagian dari generasi pembela dunia maya yang sadar etika dan tangguh secara teknikal.</p>
-  </article>
-</main>
+        <p>Sementara itu, ada pula opini yang mendukung kepercayaan pada keterangan pihak perempuan, dengan menyebut bahwa hanya pihak yang terkait yang mengetahui kebenaran identitas ayah dan kronologi hubungan tersebut.</p>
 
-<footer>
-  © 2025 0xCyber.ID. All rights reserved. | Founder: Yongky & Mizzu
-</footer>
+        <div class="comments">
+          <strong>Contoh reaksi netizen:</strong>
+          <ul>
+            <li>“Njir lah pada ngaku-ngaku gini bikin jelek nama Erika.”</li>
+            <li>“Lebih percaya ke pengakuan cewek si, kan dia yang tahu bapaknya siapa.”</li>
+          </ul>
+        </div>
 
+        <p>Hingga berita ini diturunkan, belum ada klarifikasi resmi bersama dari DJ Ohim maupun Erika Carlina yang dapat memastikan kebenaran pengakuan tersebut. Redaksi akan terus memantau perkembangan dan memperbarui laporan bila ada pernyataan resmi.</p>
+
+        <div class="caption">Foto: Sumber foto (ganti dengan link foto yang valid jika perlu). Kredit: Pemilik foto</div>
+
+        <div class="actions" aria-hidden="true">
+          <button class="btn" onclick="navigator.clipboard.writeText(document.title)">Salin Judul</button>
+          <button class="btn" onclick="alert('Fungsi share belum diaktifkan')">Bagikan</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <script>
+    (function(){
+      const CORRECT = 'yongky'; // kata sandi yang diminta (persis)
+      const gate = document.getElementById('gate');
+      const site = document.getElementById('siteContent');
+      const pwInput = document.getElementById('pw');
+      const submit = document.getElementById('submitPw');
+      const cancel = document.getElementById('cancelPw');
+      const err = document.getElementById('err');
+
+      // Jika sudah berhasil sebelumnya di session ini, tampilkan langsung
+      if (sessionStorage.getItem('site_auth') === 'true') {
+        openSite();
+      } else {
+        pwInput.focus();
+      }
+
+      function openSite() {
+        gate.classList.add('hidden');
+        site.classList.remove('hidden');
+        site.setAttribute('aria-hidden', 'false');
+        gate.setAttribute('aria-hidden', 'true');
+      }
+
+      function deny(msg) {
+        err.textContent = msg || 'Kata sandi salah';
+        pwInput.value = '';
+        pwInput.focus();
+        // opsi animasi kecil
+        gate.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-8px)' }, { transform: 'translateX(8px)' }, { transform: 'translateX(0)' }], { duration: 300 });
+      }
+
+      submit.addEventListener('click', tryPw);
+      pwInput.addEventListener('keydown', function(e){
+        if (e.key === 'Enter') tryPw();
+      });
+      cancel.addEventListener('click', function(){
+        // Tutup tab atau keluarkan overlay — di sini kita hanya beri pesan
+        err.textContent = 'Akses dibatalkan.';
+        pwInput.value = '';
+      });
+
+      function tryPw(){
+        const val = pwInput.value || '';
+        if (val === CORRECT) {
+          sessionStorage.setItem('site_auth','true'); // tidak minta lagi selama session browser
+          openSite();
+        } else {
+          deny('Kata sandi salah — coba lagi.');
+        }
+      }
+    })();
+  </script>
 </body>
-</html>
+  </html>
